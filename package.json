@@ -1,0 +1,54 @@
+{
+  "name": "index-beacon",
+  "version": "1.0.0",
+  "description": "Check indexability of your built static site: meta robots and X-Robots-Tag (noindex, nofollow, none, unavailable_after, nosnippet) against your intended indexing rules, site-wide noindex leaks, conflicts and malformed directives. Text/JSON/SARIF/Markdown, allowlist with expiry, GitHub Action. Zero deps.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "index-beacon": "bin/index-beacon.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "action.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "indexability",
+    "noindex",
+    "nofollow",
+    "meta-robots",
+    "x-robots-tag",
+    "seo",
+    "static-site",
+    "html",
+    "sarif",
+    "github-action"
+  ],
+  "author": "Louis Wright <hello@louiswright.co.uk> (https://github.com/MrLouisWright)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLouisWright/index-beacon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrLouisWright/index-beacon/issues"
+  },
+  "homepage": "https://github.com/MrLouisWright/index-beacon#readme"
+}
