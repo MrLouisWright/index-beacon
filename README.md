@@ -1,5 +1,7 @@
 # index-beacon
 
+[![npm version](https://img.shields.io/npm/v/index-beacon.svg)](https://www.npmjs.com/package/index-beacon) [![CI](https://github.com/MrLouisWright/index-beacon/actions/workflows/ci.yml/badge.svg)](https://github.com/MrLouisWright/index-beacon/actions/workflows/ci.yml) [![Node](https://img.shields.io/node/v/index-beacon.svg)](https://nodejs.org) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > Check which pages of your built static site search engines are told not to index or follow, via meta robots and X-Robots-Tag, against the rules you actually intend.
 
 One stray `noindex` can remove a money page from Google, and a staging `X-Robots-Tag: noindex` that ships to production can remove the whole site. The opposite also happens: search result pages, drafts and thank-you pages get indexed. `index-beacon` reads every built HTML page and the header rules in Netlify/Cloudflare `_headers` and `vercel.json`, works out the effective robots directives for each page, and compares them with your intended indexing rules. Each finding has the file, line, severity and a **concrete fix**.
