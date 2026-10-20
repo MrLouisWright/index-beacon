@@ -1,6 +1,6 @@
 {
   "name": "index-beacon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check indexability of your built static site: meta robots and X-Robots-Tag (noindex, nofollow, none, unavailable_after, nosnippet) against your intended indexing rules, site-wide noindex leaks, conflicts and malformed directives. Text/JSON/SARIF/Markdown, allowlist with expiry, GitHub Action. Zero deps.",
   "type": "module",
   "main": "./src/index.js",
