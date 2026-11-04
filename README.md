@@ -71,7 +71,7 @@ HIGH     docs.html:1 /docs.html is noindex via <meta name="robots" content="noin
 ## Options
 
 ```text
-index-beacon 1.0.0 — check meta robots and X-Robots-Tag against your intended indexing rules
+index-beacon 1.0.1 — check meta robots and X-Robots-Tag against your intended indexing rules
 
 Usage: index-beacon [site-dir] [options]
 
@@ -180,11 +180,19 @@ The action runs the bundled CLI with Node 20; it has no dependencies to install.
 
 ## Library
 
+Install it in your project first:
+
+```bash
+npm install --save-dev index-beacon
+```
+
 ```js
 import { check, DEFAULT_NOINDEX } from "index-beacon";
 const report = check("dist", { noindex: ["/internal/**"], index: ["/search"] });
 console.log(report.info.noindex, report.findings);
 ```
+
+The package is ESM-only (there is no CommonJS build): use `import`, or `await import("index-beacon")` from CommonJS.
 
 Types are included.
 
